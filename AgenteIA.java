@@ -1,4 +1,17 @@
-public class AgenteIA {
+public abstract class AgenteIA {
+    protected String nome = "GPT-4";
+    protected String status = "IDLE";
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void conectarServidor() throws ErroComunicacaoIAException {
+
+    }
+
+    public abstract void processarRequisicao(String input) throws FalhaProcessamentoAgenteException, PromptInadequadoException, ErroComunicacaoIAException;
+
     public void processarPrompt(String prompt) throws FalhaProcessamentoAgenteException {
         if (prompt == null || prompt.isEmpty()) {
             throw new FalhaProcessamentoAgenteException("O prompt não pode estar vazio.");
