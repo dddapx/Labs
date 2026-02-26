@@ -9,7 +9,7 @@ public class AgenteImagem extends AgenteIA{
         System.out.println("Agente de Imagem "+ this.getNome() +" sintetizando pixels para: " + input);
     }
 
-    public void processarFila(List<AgenteIA> lista, String comando){
+    public void processarFila(List<AgenteIA> lista, String comando) throws FalhaProcessamentoAgenteException, PromptInadequadoException, ErroComunicacaoIAException {
         List<AgenteIA> orquestrador = new ArrayList<>();
         orquestrador.add(new AgenteTexto());
         orquestrador.add(new AgenteImagem());
