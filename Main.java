@@ -2,7 +2,7 @@ import java.time.LocalDateTime;
 
 public class Main {
     public static void main(String[] args) {
-        AgenteIA agente = new AgenteIA();
+        AgenteIA agente = new AgenteTexto();
 
         String[] prompts = {
             "Número de galinhas no Brasil.",

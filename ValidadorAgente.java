@@ -1,6 +1,6 @@
 public class ValidadorAgente {
     public static void main(String[] args) {
-        AgenteIA meuAgente = new AgenteIA();
+        AgenteIA meuAgente = new AgenteTexto();
         int testesPassados = 0;
 
         System.out.println("=== INICIANDO VALIDAÇÃO DO AGENTE DE IA ===");
