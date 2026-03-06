@@ -40,7 +40,7 @@ public abstract class AgenteIA {
         }
     }
 
-    public usarHabilidade(IAcaoAgente ferramenta, String comando){
-
+    public String usarHabilidade(IAcaoAgente ferramenta, String comando) throws FalhaProcessamentoAgenteException, PromptInadequadoException, ErroComunicacaoIAException{
+        return ferramenta.usarHabilidade(comando);
     }
 }

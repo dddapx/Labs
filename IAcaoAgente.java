@@ -1,3 +1,3 @@
 public interface IAcaoAgente {
-    public void analiseCodigo (String comando) throws Exception;
+    String usarHabilidade(String comando) throws FalhaProcessamentoAgenteException, PromptInadequadoException;
 }

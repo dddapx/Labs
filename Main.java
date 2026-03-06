@@ -3,8 +3,8 @@ import java.time.LocalDateTime;
 public class Main {
     public static void main(String[] args) {
         AgenteIA agente = new AgenteTexto();
-        AgenteIA agenteWeb = new PluginPesquisaWeb();
-        AgenteIA geraCodigo = new PluginGeradorCodigo();
+        PluginPesquisaWeb agenteWeb = new PluginPesquisaWeb();
+        PluginGeradorCodigo geraCodigo = new PluginGeradorCodigo();
 
         String[] prompts = {
             "Número de galinhas no Brasil.",
@@ -19,6 +19,12 @@ public class Main {
             try {
                 agente.verificarSeguranca(promptAtual); 
                 agente.processarPrompt(promptAtual); 
+
+                String resultadoPesquisa = agente.usarHabilidade(agenteWeb, promptAtual);
+                System.out.println(resultadoPesquisa);
+
+                String resultadoCodigo = agente.usarHabilidade(geraCodigo, promptAtual);
+                System.out.println(resultadoCodigo);
                 
                 agente.chamarModeloExterno(); 
 
