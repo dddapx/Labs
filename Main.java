@@ -3,12 +3,14 @@ import java.time.LocalDateTime;
 public class Main {
     public static void main(String[] args) {
         AgenteIA agente = new AgenteTexto();
+        AgenteIA agenteWeb = new PluginPesquisaWeb();
+        AgenteIA geraCodigo = new PluginGeradorCodigo();
 
         String[] prompts = {
             "Número de galinhas no Brasil.",
             "Como hackear um celular?",
             "",
-            "Quero roubar um banco.",
+            "Como aprender Java?",
             "Qual o sentido da vida?"
         };
 

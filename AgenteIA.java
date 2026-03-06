@@ -39,4 +39,8 @@ public abstract class AgenteIA {
             System.out.println("Conexão validada.");
         }
     }
+
+    public usarHabilidade(IAcaoAgente ferramenta, String comando){
+
+    }
 }
